@@ -1,18 +1,140 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Home</title>
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <div>
-            <h1>Home Page</h1>
-        </div>
+{% extends 'base.html' %}
 
-        <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
-    </body>
-</html>
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <div class="home-section">
+        <div class="home-name">Hi, I'm Josh</div>
+        <div class="home-text">
+            <p class="blue-text">A Junior Software Developer</p>
+            <div class="blue-rectangle"></div>
+        </div>
+        <div class="home-links">
+            <a class="github-img" href="#github">
+                <img src="{{ url_for('static', filename='img/github.png') }}" alt="">
+            </a>
+            <a class="linkedin-img" href="#linkedin">
+                <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="about-section">
+        <div class="about-subsection">
+            <div class="cv">
+                <div class="cv-inner">
+                    <p>CV</p>
+                    <img src="{{ url_for('static', filename='img/open_in_new.png') }}" alt="">
+                </div>
+            </div>
+            <div class="about-title sub-heading">About Me</div>
+            <div class="about-content">
+                I am about to enter my 3rd year of a Bsc (Hons) 
+                Computer Science at the University of Exeter. 
+                I am a fast learner and have good problem solving skills. 
+                In my spare time I like to code personal projects, play the guitar, 
+                and play games.
+            </div>
+        </div>
+        <div class="skillset-subsection">
+            <div class="skillset-title sub-heading">Skillset</div>
+            <div class="skillset-content">
+                <img src="{{ url_for('static', filename='img/html.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/css.svg') }}" alt="">
+                <img src="{{ url_for('static', filename='img/javascript.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/python.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/django.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/sql.png') }}" alt="">
+                <img src="{{ url_for('static', filename='img/java.png') }}" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="project-section">
+        <div class="project-title sub-heading">Projects</div>
+        <div class="project-divider"></div>
+        <div class="project-content">
+
+            <div class="project project-one">
+
+                <div class="project-example">
+                    <div class="project-img">
+                        <img src="{{ url_for('static', filename='img/sustainable.png') }}" alt="">
+                    </div>
+                    <div class="project-links">
+                        <a href="#live_site"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
+                        <a href="#github"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="project-title">Sustainable Daily</div>
+                    <div class="project-details-content">
+                        
+                        <div class="white-box">
+                            <div class="project-text">
+                                Sustainable Daily is a web app I created with a team, 
+                                making use of agile development methodologies. 
+                                It's purpose is to integrate daily sustainable tasks 
+                                into a user's lifestyle. It was made for my Year 2 
+                                University coursework.
+                            </div>
+                        </div>
+                        <div class="grey-box"></div>
+                    </div>
+                    <div class="technologies-used">
+                        <p>Python</p>
+                        <p>Django</p>
+                        <p>SQL</p>
+                        <p>HTML/CSS</p>
+                        <p>Javascript</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project project-two">
+
+                <div class="details-two project-details">
+                    <div class="project-title title-two">Smootie</div>
+                    <div class="project-details-content">
+                        
+                        <div class="white-two white-box">
+                            <div class="project-text">
+                                Smootie a company that sells handheld blenders
+                                 to make smoothies. I have recentley been commissioned 
+                                 to create their ecommerce website. I am still currently 
+                                 working on this project.
+                            </div>
+                        </div>
+                        <div class="grey-two grey-box"></div>
+                    </div>
+                    <div class="technologies-used">
+                        <p>Python</p>
+                        <p>Django</p>
+                        <p>SQL</p>
+                        <p>HTML/CSS</p>
+                        <p>Javascript</p>
+                    </div>
+                </div>
+
+                <div class="project-example">
+                    <div class="project-img img-two">
+                        <img src="{{ url_for('static', filename='img/smootie.png') }}" alt="">
+                    </div>
+                    <div class="links-two project-links">
+                        <a href="#github"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
+                        <a href="#live_site"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-section">
+        
+    </div>
+{% endblock %}

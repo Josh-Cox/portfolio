@@ -1,0 +1,53 @@
+:root {
+    --color-black: black;
+    --color-white: white;
+    --color-primary: #f0ecff;
+    --color-blue: #d0e1ed;
+    --color-grey: #d3d3d6;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    background-color: var(--color-primary);
+    z-index: -1;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var( --color-white);
+    line-height: 10rem;
+    min-height: 10rem;
+}
+
+.nav-element {
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    font-size: 2.5rem;
+    float: left;
+}
+
+.nav-element a {
+    color: var(--color-black);
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    text-decoration: none;
+}
+
+.name {
+    margin-left: 2rem;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.section {
+    float: right;
+}
+
+.last {
+    margin-right: 4rem;
+}
