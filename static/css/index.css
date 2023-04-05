@@ -182,6 +182,7 @@
     position: relative;
     width: 50rem;
     z-index: -1;
+    box-shadow: var(--box-shadow);
 }
 
 .project-links img {
@@ -212,7 +213,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-
+    box-shadow: var(--box-shadow);
     margin-left: -5rem;
 }
 
