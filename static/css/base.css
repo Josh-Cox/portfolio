@@ -20,9 +20,12 @@ html, body {
     height: 100%;
     background-color: var(--color-primary);
     z-index: -1;
+    scroll-behavior: smooth;
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,6 +33,9 @@ html, body {
     background-color: var( --color-white);
     line-height: 10rem;
     min-height: 10rem;
+    top: 0;
+    z-index: 2;
+    transition: all 300ms ease;
 }
 
 .nav-element {
@@ -37,14 +43,16 @@ html, body {
     font-weight: 300;
     font-size: 2.5rem;
     float: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .nav-element a {
     color: var(--color-black);
     display: block;
     text-align: center;
-    padding: 1rem 3rem;
     text-decoration: none;
+    width: 100%;
 }
 
 .name {
@@ -59,4 +67,32 @@ html, body {
 
 .last {
     margin-right: 4rem;
+}
+
+/* ---------- Animations ---------- */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 0;
+    height: .1rem;
+    z-index: 1;
+    background-color: black;
+    bottom: 3rem;
+    transition: all 300ms ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+@media only screen and (max-width: 958px) {
+    .navbar {
+        display: none;
+    }
 }
