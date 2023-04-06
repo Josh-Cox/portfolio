@@ -83,7 +83,7 @@
 
 .about-content {
     font-family: "Roboto";
-    font-size: 1.8rem;
+    font-size: clamp(.5rem, 4vw, 1.8rem);
     font-weight: 400;
     margin-left: 5rem;
     margin-right: 5rem;
@@ -96,6 +96,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+.cv-link {
+    text-decoration: none;
+    color: black;
 }
 
 .cv-inner {
@@ -180,7 +185,7 @@
 
 .project-img img {
     position: relative;
-    width: 50rem;
+    width: clamp(10rem, 40vw, 50rem);
     z-index: -1;
     box-shadow: var(--box-shadow);
 }
@@ -206,7 +211,7 @@
 }
 
 .white-box {
-    width: 108%;
+    width: 50vw;
     background-color: var(--color-white);
     height: 15rem;
     display: flex;
@@ -219,7 +224,7 @@
 
 .project-text {
     font-family: "Roboto";
-    font-size: 1.7rem;
+    font-size: clamp(1rem, 1.7vw, 1.7rem);
     font-weight: 400;
     margin-left: 5rem;
     margin-right: 5rem;
@@ -241,11 +246,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: clamp(.5rem, 2vw, 3rem);
     width: 100%;
     margin-top: -2rem;
 
-    font-size: 1.5rem;
+    font-size: clamp(.5rem, 4vw, 1.5rem);
     font-weight: 300;
 }
 
@@ -265,7 +270,7 @@
 }
 
 .grey-two {
-    margin-left: 7rem;
+    margin-left: 1rem;
     z-index: 1;
 }
 
@@ -297,7 +302,7 @@
 }
 
 .img-three img {
-    width: 15rem;
+    width: clamp(10rem, 15vw, 15rem);
 }
 
 .project-three {
@@ -308,8 +313,8 @@
 
 .contact-section {
     margin-top: 10rem;
-    height: 50rem;
     background: var(--color-white);
+    padding-bottom: 2rem;
 }
 
 .contact-container {
@@ -332,7 +337,7 @@
 
 .contact-form {
     margin-top: 4rem;
-    width: 30%;
+    width: clamp(10rem, 50%, 40rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -378,4 +383,71 @@
 
 .flash-failure {
     background-color: var(--color-failure);
+}
+
+.back-top {
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    font-size: 1rem;
+    margin: auto;
+    width: fit-content;
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.back-top a {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 958px) {
+    .blue-rectangle {
+        width: 13rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+    }
+
+    .about-subsection {
+        width: 100%;
+    }
+
+    .skillset-subsection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .skillset-content {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+
+    .project-details {
+        order: 1;
+    }
+
+    .project-example {
+        order: 2;
+    }
+
+    .project-img img {
+        width: 100%;
+    }
+
+    .white-box {
+        width: 100%;
+        margin: auto;
+    }
 }

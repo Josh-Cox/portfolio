@@ -1,1 +1,1 @@
-console.log("Working");
+const to_top = document.getElementById('to_top');

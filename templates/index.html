@@ -12,22 +12,24 @@
             <div class="blue-rectangle"></div>
         </div>
         <div class="home-links">
-            <a class="github-img" href="#github">
+            <a class="github-img" target="_blank" href="https://github.com/Josh-Cox">
                 <img src="{{ url_for('static', filename='img/github.png') }}" alt="">
             </a>
-            <a class="linkedin-img" href="#linkedin">
+            <a class="linkedin-img" target="_blank" href="https://www.linkedin.com/in/josh-cox-bb2874270/">
                 <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="">
             </a>
         </div>
     </div>
 
-    <div class="about-section">
+    <div id="about" class="about-section">
         <div class="about-subsection">
             <div class="cv">
-                <div class="cv-inner">
-                    <p>CV</p>
-                    <img src="{{ url_for('static', filename='img/open_in_new.png') }}" alt="">
-                </div>
+                <a class="cv-link" href="{{ url_for('static', filename='img/cv.pdf') }}" target="_blank">
+                    <div class="cv-inner">
+                            <p>CV</p>
+                            <img src="{{ url_for('static', filename='img/open_in_new.png') }}" alt="">
+                    </div>
+                </a>
             </div>
             <div class="about-title sub-heading">About Me</div>
             <div class="about-content">
@@ -52,7 +54,7 @@
         </div>
     </div>
 
-    <div class="project-section">
+    <div id="projects" class="project-section">
         <div class="project-title sub-heading">Projects</div>
         <div class="project-divider"></div>
         <div class="project-content">
@@ -64,8 +66,8 @@
                         <img src="{{ url_for('static', filename='img/sustainable.png') }}" alt="">
                     </div>
                     <div class="project-links">
-                        <a href="#live_site"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
-                        <a href="#github"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
+                        <a target="_blank" href="http://www.sustainable-daily.live/"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
+                        <a target="_blank" href="https://github.com/itselectroz/sustainable-daily/pulls?q=is%3Apr+is%3Aclosed+author%3AJosh-Cox"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
                     </div>
                 </div>
 
@@ -125,8 +127,8 @@
                         <img src="{{ url_for('static', filename='img/smootie.png') }}" alt="">
                     </div>
                     <div class="links-two project-links">
-                        <a href="#github"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
-                        <a href="#live_site"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
+                        <a target="_blank" href="https://github.com/Josh-Cox/Smootie-Website"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
+                        <a target="_blank" href="http://harleyaf.pythonanywhere.com/"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
                     </div>
                 </div>
 
@@ -141,7 +143,7 @@
                         <img src="{{ url_for('static', filename='img/info.jpg') }}" alt="">
                     </div>
                     <div class="project-links">
-                        <a href="#github"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
+                        <a target="_blank" href="https://github.com/Josh-Cox/ExercisesApp"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
                     </div>
                 </div>
 
@@ -169,7 +171,7 @@
         </div>
     </div>
 
-    <div class="contact-section">
+    <div id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-title sub-heading">Contact Me</div>
             <div class="contact-text">I'd love to hear from you!</div>
@@ -201,4 +203,6 @@
             window.scrollTo(0, document.body.scrollHeight);
         </script>
     {% endif %}
+
+    <div id="to_top" class="back-top"><a href="#top">Back to the top!</a></div>
 {% endblock %}

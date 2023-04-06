@@ -12,17 +12,35 @@
         <title>{% block title %}Home{% endblock %}</title>
     </head>
     <body>
-        <ul class="navbar">
-            <li class="nav-element name"><a href="#home">Josh Cox</a></li>
-            <li class="nav-element section last"><a href="#contact">Contact</a></li>
-            <li class="nav-element section"><a href="#projects">Projects</a></li>
-            <li class="nav-element section"><a href="#about">About</a></li>
+        <ul class="navbar" id="navbar" >
+            <li class="nav-element name"><a class="nav-link" href="#top">Josh Cox</a></li>
+            <li class="nav-element section last"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-element section"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-element section"><a class="nav-link" href="#about">About</a></li>
           </ul>
         <div class="container">
             {% block content %}
             {% endblock %}
         </div>
 
-        <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}"></script>
+        <script>
+            const nav = document.getElementById("navbar")
+            let body_scroll = 0;
+        
+            let prevScrollpos = window.pageYOffset;
+        
+            window.onscroll = function() {
+              let currentScrollPos = window.pageYOffset;
+        
+              if(currentScrollPos < prevScrollpos) {
+                nav.style.top = "0";
+              }
+              else {
+                nav.style.top = "-10rem";
+              }
+              prevScrollpos = currentScrollPos;
+            }
+
+          </script>
     </body>
 </html>
