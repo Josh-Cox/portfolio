@@ -385,6 +385,19 @@
     background-color: var(--color-failure);
 }
 
+.bottom-form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.call {
+    font-family: "Roboto Mono";
+    font-weight: 300;
+    font-size: 1rem;
+}
+
 .back-top {
     font-family: "Roboto Mono";
     font-weight: 300;
