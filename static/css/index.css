@@ -463,4 +463,9 @@
         width: 100%;
         margin: auto;
     }
+
+    .grey-box {
+        margin-left: 0;
+    }
+
 }
