@@ -141,9 +141,18 @@
     flex-wrap: wrap;
 }
 
-.skillset-content img {
+.html, .js, .py, .sql, .java {
     width: 4rem;
 }
+
+.css {
+    width: 3.7rem;
+}
+
+.django {
+    width: 4.5rem;
+}
+
 
 /* ---------- Projects section ---------- */
 
