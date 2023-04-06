@@ -290,8 +290,92 @@
     gap: .5rem;
 }
 
+.img-three {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: .5rem;
+}
+
+.img-three img {
+    width: 15rem;
+}
+
+.project-three {
+    margin-top: 20rem;
+}
+
 /* ---------- Contact section ---------- */
 
 .contact-section {
+    margin-top: 10rem;
     height: 50rem;
+    background: var(--color-white);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-title {
+    padding-top: 4rem;
+}
+
+.contact-text {
+    font-family: "Roboto Mono";
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.contact-form {
+    margin-top: 4rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.text-input {
+    font-family: "Roboto Mono";
+    width: 100%;
+    min-height: 4rem;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    border: .1rem solid var(--color-border);
+    border-radius: .2rem;
+    background-color: var(--color-contact);
+    resize: none;
+    
+}
+
+.contact-message {
+    min-height: 10rem;
+    resize: both;
+}
+
+.contact-submit {
+    background-color: var(--color-blue);
+    border: none;
+    padding: 1rem 2rem;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.flash {
+    margin-top: 2rem;
+    font-family: "Roboto Mono";
+    padding: 10px;
+}
+
+.flash-success {
+    background-color: var(--color-success);
+}
+
+.flash-failure {
+    background-color: var(--color-failure);
 }

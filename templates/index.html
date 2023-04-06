@@ -131,10 +131,74 @@
                 </div>
 
             </div>
+
+           <div class="project project-three">
+
+                <div class="project-example">
+                    <div class="img-three project-img">
+                        <img src="{{ url_for('static', filename='img/explore.jpg') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/filter.jpg') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/info.jpg') }}" alt="">
+                    </div>
+                    <div class="project-links">
+                        <a href="#github"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="project-title">Olympia Fitness</div>
+                    <div class="project-details-content">
+                        
+                        <div class="white-box">
+                            <div class="project-text">
+                                Olympia Fitness is a mobile app designed to search and 
+                                save exercises along with their information. You can filter 
+                                searches by type, muscle and difficulty. This was an individual 
+                                project made for my year 2 coursework.
+                            </div>
+                        </div>
+                        <div class="grey-box"></div>
+                    </div>
+                    <div class="technologies-used">
+                        <p>Java</p>
+                        <p>Android Studio</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <div class="contact-section">
-        
+        <div class="contact-container">
+            <div class="contact-title sub-heading">Contact Me</div>
+            <div class="contact-text">I'd love to hear from you!</div>
+
+            {% for message in get_flashed_messages() %}
+                {% if success %}
+                    <div class="flash flash-success">{{ message }}</div>
+                {% else %}
+                    <div class="flash flash-failure">{{ message }}</div>
+                {% endif %}
+            {% endfor %}
+
+            <form class="contact-form" action="{{ url_for('home') }}" method=post>
+
+                {{ form.hidden_tag() }}
+                {{ form.name(class="text-input contact-name") }}
+                {{ form.email(class="text-input contact-email") }}
+
+                {{ form.message(class="text-input contact-message") }}
+                {{ form.submit(class="contact-submit") }}
+            </form>
+
+        </div>
     </div>
+
+    {% if scroll %}
+        <script>
+            // scroll to bottom of page
+            window.scrollTo(0, document.body.scrollHeight);
+        </script>
+    {% endif %}
 {% endblock %}
