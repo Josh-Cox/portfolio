@@ -460,6 +460,11 @@
         order: 1;
     }
 
+    .project-text {
+        width: 100%;
+        margin: 1rem;
+    }
+
     .project-example {
         order: 2;
     }
