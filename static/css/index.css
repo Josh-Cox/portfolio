@@ -141,7 +141,7 @@
     flex-wrap: wrap;
 }
 
-.html, .js, .py, .sql, .java {
+.html, .py, .sql, .java {
     width: 4rem;
 }
 
@@ -149,8 +149,12 @@
     width: 3.7rem;
 }
 
-.django {
+.django, .ts {
     width: 4.5rem;
+}
+
+.react, .tailwind {
+    width: 5rem;
 }
 
 
@@ -197,6 +201,10 @@
     width: clamp(10rem, 40vw, 50rem);
     z-index: -1;
     box-shadow: var(--box-shadow);
+}
+
+.img-two {
+    margin-left: -2rem;
 }
 
 .project-links img {
@@ -273,7 +281,7 @@
 }
 
 .white-two {
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     position: relative;
     z-index: 2;
 }
@@ -481,6 +489,10 @@
 
     .grey-box {
         margin-left: 0;
+    }
+
+    .img-two {
+        margin: 0;
     }
 
 }

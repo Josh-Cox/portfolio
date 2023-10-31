@@ -1,216 +1,277 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block title %}Home{% endblock %} {% block content
+%}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/index.css') }}"
+/>
 
-{% block title %}Home{% endblock %}
+<div class="home-section">
+  <div class="home-name">Hi, I'm Josh</div>
+  <div class="home-text">
+    <p class="blue-text">A Junior Software Developer</p>
+    <div class="blue-rectangle"></div>
+  </div>
+  <div class="home-links">
+    <a class="github-img" target="_blank" href="https://github.com/Josh-Cox">
+      <img src="{{ url_for('static', filename='img/github.png') }}" alt="" />
+    </a>
+    <a
+      class="linkedin-img"
+      target="_blank"
+      href="https://www.linkedin.com/in/josh-cox-bb2874270/"
+    >
+      <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="" />
+    </a>
+  </div>
+</div>
 
-{% block content %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-
-    <div class="home-section">
-        <div class="home-name">Hi, I'm Josh</div>
-        <div class="home-text">
-            <p class="blue-text">A Junior Software Developer</p>
-            <div class="blue-rectangle"></div>
+<div id="about" class="about-section">
+  <div class="about-subsection">
+    <div class="cv">
+      <a
+        class="cv-link"
+        href="{{ url_for('static', filename='img/cv.pdf') }}"
+        target="_blank"
+      >
+        <div class="cv-inner">
+          <p>CV</p>
+          <img
+            src="{{ url_for('static', filename='img/open_in_new.png') }}"
+            alt=""
+          />
         </div>
-        <div class="home-links">
-            <a class="github-img" target="_blank" href="https://github.com/Josh-Cox">
-                <img src="{{ url_for('static', filename='img/github.png') }}" alt="">
-            </a>
-            <a class="linkedin-img" target="_blank" href="https://www.linkedin.com/in/josh-cox-bb2874270/">
-                <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="">
-            </a>
+      </a>
+    </div>
+    <div class="about-title sub-heading">About Me</div>
+    <div class="about-content">
+      I am have just started my 3rd year of a BSc (Hons) Computer Science at the
+      University of Exeter. I am a fast learner and have good problem solving
+      skills. In my spare time I like to code personal projects, play the
+      guitar, and play games.
+    </div>
+  </div>
+  <div class="skillset-subsection">
+    <div class="skillset-title sub-heading">Skillset</div>
+    <div class="skillset-content">
+      <img
+        class="html"
+        src="{{ url_for('static', filename='img/html.png') }}"
+        alt=""
+      />
+      <img
+        class="css"
+        src="{{ url_for('static', filename='img/css.svg') }}"
+        alt=""
+      />
+      <img
+        class="ts"
+        src="{{ url_for('static', filename='img/typescript.png') }}"
+        alt=""
+      />
+      <img
+        class="py"
+        src="{{ url_for('static', filename='img/python.png') }}"
+        alt=""
+      />
+      <img
+        class="django"
+        src="{{ url_for('static', filename='img/django.png') }}"
+        alt=""
+      />
+      <img
+        class="sql"
+        src="{{ url_for('static', filename='img/sql.png') }}"
+        alt=""
+      />
+      <img
+        class="java"
+        src="{{ url_for('static', filename='img/java.png') }}"
+        alt=""
+      />
+      <img
+        class="react"
+        src="{{ url_for('static', filename='img/react.png') }}"
+        alt=""
+      />
+      <img
+        class="tailwind"
+        src="{{ url_for('static', filename='img/tailwind.png') }}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="project-section">
+  <div class="project-title sub-heading">Projects</div>
+  <div class="project-divider"></div>
+  <div class="project-content">
+    <div class="project project-one">
+      <div class="project-example">
+        <div class="project-img img-one">
+          <img
+            src="{{ url_for('static', filename='img/smootie.png') }}"
+            alt=""
+          />
         </div>
+        <div class="links-one project-links">
+          <a target="_blank" href="https://github.com/Josh-Cox/Smootie-Website"
+            ><img
+              src="{{ url_for('static', filename='img/github_outline.png') }}"
+              alt=""
+          /></a>
+          <a target="_blank" href="http://harleyaf.pythonanywhere.com/"
+            ><img
+              src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}"
+              alt=""
+          /></a>
+        </div>
+      </div>
+
+      <div class="project-details">
+        <div class="project-title">Smootie</div>
+        <div class="project-details-content">
+          <div class="white-box">
+            <div class="project-text">
+              Smootie sells handheld blenders to make smoothies. I have made an
+              example website of an ecommerce site for the brand. I decided not
+              to make use of any frameworks such as React or Angular, as to
+              fully understand how the structure of creating a website works.<br />
+              <br />
+            </div>
+          </div>
+          <div class="grey-box"></div>
+        </div>
+        <div class="technologies-used">
+          <p>Python</p>
+          <p>Django</p>
+          <p>SQL</p>
+          <p>HTML/CSS</p>
+          <p>Javascript</p>
+        </div>
+      </div>
     </div>
 
-    <div id="about" class="about-section">
-        <div class="about-subsection">
-            <div class="cv">
-                <a class="cv-link" href="{{ url_for('static', filename='img/cv.pdf') }}" target="_blank">
-                    <div class="cv-inner">
-                            <p>CV</p>
-                            <img src="{{ url_for('static', filename='img/open_in_new.png') }}" alt="">
-                    </div>
-                </a>
+    <div class="project project-two">
+      <div class="details-two project-details">
+        <div class="project-title title-two">Climbing Hangar Dashboard</div>
+        <div class="project-details-content">
+          <div class="white-two white-box">
+            <div class="project-text">
+              Me and a friend decided to make a website to show stats about the
+              climbing hangar we go to. We take a reading of how many people are
+              in the hangar every 30m using an API, and store this. This
+              information is displayed in multiple ways across the app. We are
+              still working on this project.
             </div>
-            <div class="about-title sub-heading">About Me</div>
-            <div class="about-content">
-                I am about to enter my 3rd year of a BSc (Hons) 
-                Computer Science at the University of Exeter. 
-                I am a fast learner and have good problem solving skills. 
-                In my spare time I like to code personal projects, play the guitar, 
-                and play games.
-            </div>
+          </div>
+          <div class="grey-two grey-box"></div>
         </div>
-        <div class="skillset-subsection">
-            <div class="skillset-title sub-heading">Skillset</div>
-            <div class="skillset-content">
-                <img class="html" src="{{ url_for('static', filename='img/html.png') }}" alt="">
-                <img class="css" src="{{ url_for('static', filename='img/css.svg') }}" alt="">
-                <img class="js" src="{{ url_for('static', filename='img/javascript.png') }}" alt="">
-                <img class="py" src="{{ url_for('static', filename='img/python.png') }}" alt="">
-                <img class="django" src="{{ url_for('static', filename='img/django.png') }}" alt="">
-                <img class="sql" src="{{ url_for('static', filename='img/sql.png') }}" alt="">
-                <img class="java" src="{{ url_for('static', filename='img/java.png') }}" alt="">
-            </div>
+        <div class="technologies-used">
+          <p>React</p>
+          <p>Typescript</p>
+          <p>Tailwind</p>
+          <p>HTML/CSS</p>
         </div>
+      </div>
+
+      <div class="project-example">
+        <div class="project-img img-two">
+          <img
+            src="{{ url_for('static', filename='img/hangar-dashboard.png') }}"
+            alt=""
+          />
+        </div>
+        <div class="links-two project-links">
+          <a
+            target="_blank"
+            href="https://github.com/itselectroz/climbing-hangar-dashboard"
+            ><img
+              src="{{ url_for('static', filename='img/github_outline.png') }}"
+              alt=""
+          /></a>
+          <a target="_blank" href="https://climbing-hangar-dashboard.web.app/"
+            ><img
+              src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}"
+              alt=""
+          /></a>
+        </div>
+      </div>
     </div>
 
-    <div id="projects" class="project-section">
-        <div class="project-title sub-heading">Projects</div>
-        <div class="project-divider"></div>
-        <div class="project-content">
-
-            <div class="project project-one">
-
-                <div class="project-example">
-                    <div class="project-img">
-                        <img src="{{ url_for('static', filename='img/sustainable.png') }}" alt="">
-                    </div>
-                    <div class="project-links">
-                        <a target="_blank" href="http://www.sustainable-daily.live/"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
-                        <a target="_blank" href="https://github.com/itselectroz/sustainable-daily/pulls?q=is%3Apr+is%3Aclosed+author%3AJosh-Cox"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="project-details">
-                    <div class="project-title">Sustainable Daily</div>
-                    <div class="project-details-content">
-                        
-                        <div class="white-box">
-                            <div class="project-text">
-                                Sustainable Daily is a web app I created with a team, 
-                                making use of agile development methodologies. 
-                                It's purpose is to integrate daily sustainable tasks 
-                                into a user's lifestyle. It was made for my Year 2 
-                                University coursework.<br>
-                                <br>
-
-                                Example Admin: (Username: root, Password: admin)<br>
-                                Example User: (Username: JohnS2, Password: john)
-                            </div>
-                        </div>
-                        <div class="grey-box"></div>
-                    </div>
-                    <div class="technologies-used">
-                        <p>Python</p>
-                        <p>Django</p>
-                        <p>SQL</p>
-                        <p>HTML/CSS</p>
-                        <p>Javascript</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="project project-two">
-
-                <div class="details-two project-details">
-                    <div class="project-title title-two">Smootie</div>
-                    <div class="project-details-content">
-                        
-                        <div class="white-two white-box">
-                            <div class="project-text">
-                                Smootie sells handheld blenders
-                                 to make smoothies. I have recently been commissioned 
-                                 to create their ecommerce website. I am still currently 
-                                 working on this project.
-                            </div>
-                        </div>
-                        <div class="grey-two grey-box"></div>
-                    </div>
-                    <div class="technologies-used">
-                        <p>Python</p>
-                        <p>Django</p>
-                        <p>SQL</p>
-                        <p>HTML/CSS</p>
-                        <p>Javascript</p>
-                    </div>
-                </div>
-
-                <div class="project-example">
-                    <div class="project-img img-two">
-                        <img src="{{ url_for('static', filename='img/smootie.png') }}" alt="">
-                    </div>
-                    <div class="links-two project-links">
-                        <a target="_blank" href="https://github.com/Josh-Cox/Smootie-Website"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
-                        <a target="_blank" href="http://harleyaf.pythonanywhere.com/"><img src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}" alt=""></a>
-                    </div>
-                </div>
-
-            </div>
-
-           <div class="project project-three">
-
-                <div class="project-example">
-                    <div class="img-three project-img">
-                        <img src="{{ url_for('static', filename='img/explore.jpg') }}" alt="">
-                        <img src="{{ url_for('static', filename='img/filter.jpg') }}" alt="">
-                        <img src="{{ url_for('static', filename='img/info.jpg') }}" alt="">
-                    </div>
-                    <div class="project-links">
-                        <a target="_blank" href="https://github.com/Josh-Cox/ExercisesApp"><img src="{{ url_for('static', filename='img/github_outline.png') }}" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="project-details">
-                    <div class="project-title">Olympia Fitness</div>
-                    <div class="project-details-content">
-                        
-                        <div class="white-box">
-                            <div class="project-text">
-                                Olympia Fitness is a mobile app designed to search and 
-                                save exercises along with their information. You can filter 
-                                searches by type, muscle and difficulty. This was an individual 
-                                project made for my year 2 coursework. (Not currently on play store)
-                            </div>
-                        </div>
-                        <div class="grey-box"></div>
-                    </div>
-                    <div class="technologies-used">
-                        <p>Java</p>
-                        <p>Android Studio</p>
-                    </div>
-                </div>
-
-            </div>
+    <div class="project project-three">
+      <div class="project-example">
+        <div class="img-three project-img">
+          <img
+            src="{{ url_for('static', filename='img/explore.jpg') }}"
+            alt=""
+          />
+          <img
+            src="{{ url_for('static', filename='img/filter.jpg') }}"
+            alt=""
+          />
+          <img src="{{ url_for('static', filename='img/info.jpg') }}" alt="" />
         </div>
-    </div>
-
-    <div id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="contact-title sub-heading">Contact Me</div>
-            <div class="contact-text">I'd love to hear from you!</div>
-
-            {% for message in get_flashed_messages() %}
-                {% if success %}
-                    <div class="flash flash-success">{{ message }}</div>
-                {% else %}
-                    <div class="flash flash-failure">{{ message }}</div>
-                {% endif %}
-            {% endfor %}
-
-            <form class="contact-form" action="{{ url_for('home') }}" method=post>
-
-                {{ form.hidden_tag() }}
-                {{ form.name(class="text-input contact-name") }}
-                {{ form.email(class="text-input contact-email") }}
-
-                {{ form.message(class="text-input contact-message") }}
-                <div class="bottom-form">
-                    <div class="call">Or give me a call - 07938864084</div>
-                    {{ form.submit(class="contact-submit") }}
-                </div>
-            </form>
-            
-
+        <div class="project-links">
+          <a target="_blank" href="https://github.com/Josh-Cox/ExercisesApp"
+            ><img
+              src="{{ url_for('static', filename='img/github_outline.png') }}"
+              alt=""
+          /></a>
         </div>
+      </div>
+
+      <div class="project-details">
+        <div class="project-title">Olympia Fitness</div>
+        <div class="project-details-content">
+          <div class="white-box">
+            <div class="project-text">
+              Olympia Fitness is a mobile app designed to search and save
+              exercises along with their information. You can filter searches by
+              type, muscle and difficulty. This was an individual project made
+              for my year 2 coursework. (Not currently on play store)
+            </div>
+          </div>
+          <div class="grey-box"></div>
+        </div>
+        <div class="technologies-used">
+          <p>Java</p>
+          <p>Android Studio</p>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
-    {% if scroll %}
-        <script>
-            // scroll to bottom of page
-            window.scrollTo(0, document.body.scrollHeight);
-        </script>
-    {% endif %}
+<div id="contact" class="contact-section">
+  <div class="contact-container">
+    <div class="contact-title sub-heading">Contact Me</div>
+    <div class="contact-text">I'd love to hear from you!</div>
 
-    <div id="to_top" class="back-top"><a href="#top">Back to the top!</a></div>
+    {% for message in get_flashed_messages() %} {% if success %}
+    <div class="flash flash-success">{{ message }}</div>
+    {% else %}
+    <div class="flash flash-failure">{{ message }}</div>
+    {% endif %} {% endfor %}
+
+    <form class="contact-form" action="{{ url_for('home') }}" method="post">
+      {{ form.hidden_tag() }} {{ form.name(class="text-input contact-name") }}
+      {{ form.email(class="text-input contact-email") }} {{
+      form.message(class="text-input contact-message") }}
+      <div class="bottom-form">
+        <div class="call">Or give me a call - 07938864084</div>
+        {{ form.submit(class="contact-submit") }}
+      </div>
+    </form>
+  </div>
+</div>
+
+{% if scroll %}
+<script>
+  // scroll to bottom of page
+  window.scrollTo(0, document.body.scrollHeight);
+</script>
+{% endif %}
+
+<div id="to_top" class="back-top"><a href="#top">Back to the top!</a></div>
 {% endblock %}
