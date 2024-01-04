@@ -133,10 +133,11 @@
         <div class="project-details-content">
           <div class="white-box">
             <div class="project-text">
-              Smootie sells handheld blenders to make smoothies. I have made an
-              example website of an ecommerce site for the brand. I decided not
-              to make use of any frameworks such as React or Angular, as to
-              fully understand how the structure of creating a website works.<br />
+              The first website I made was for Smootie, who sell handheld
+              blenders to make smoothies. This is an example website of an
+              ecommerce site for the brand. I decided not to make use of any
+              frameworks such as React or Angular, as to fully understand how
+              the structure of creating a website works.<br />
               <br />
             </div>
           </div>
@@ -154,43 +155,40 @@
 
     <div class="project project-two">
       <div class="details-two project-details">
-        <div class="project-title title-two">Climbing Hangar Dashboard</div>
+        <div class="project-title title-two">Data & Machine Learning</div>
         <div class="project-details-content">
           <div class="white-two white-box">
             <div class="project-text">
-              Me and a friend decided to make a website to show stats about the
-              climbing hangar we go to. We take a reading of how many people are
-              in the hangar every 30m using an API, and store this. This
-              information is displayed in multiple ways across the app. We are
-              still working on this project.
+              This was a project for my course where I had to use machine
+              learning to answer a research question. I used different machine
+              learning techniques to analyze a video games sales dataset. You
+              can find my presentation, report and notebook in the links below.
             </div>
           </div>
           <div class="grey-two grey-box"></div>
         </div>
         <div class="technologies-used">
-          <p>React</p>
-          <p>Typescript</p>
-          <p>Tailwind</p>
-          <p>HTML/CSS</p>
+          <p>Python</p>
+          <p>Jupyter Notebook</p>
+          <p>Latex</p>
+          <p>Machine Learning</p>
         </div>
       </div>
 
       <div class="project-example">
         <div class="project-img img-two">
           <img
-            src="{{ url_for('static', filename='img/hangar-dashboard.png') }}"
+            src="{{ url_for('static', filename='img/vid_games_example.png') }}"
             alt=""
           />
         </div>
         <div class="links-two project-links">
-          <a
-            target="_blank"
-            href="https://github.com/itselectroz/climbing-hangar-dashboard"
+          <a target="_blank" href="https://github.com/Josh-Cox/ML-Game-Sales"
             ><img
               src="{{ url_for('static', filename='img/github_outline.png') }}"
               alt=""
           /></a>
-          <a target="_blank" href="https://climbing-hangar-dashboard.web.app/"
+          <a target="_blank" href="https://youtu.be/kPiN1Kdv4fw"
             ><img
               src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}"
               alt=""
@@ -239,6 +237,53 @@
           <p>Android Studio</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="project project-two">
+  <div class="details-two project-details">
+    <div class="project-title title-two">Climbing Hangar Dashboard</div>
+    <div class="project-details-content">
+      <div class="white-two white-box">
+        <div class="project-text">
+          Me and a friend decided to make a website to show stats about the
+          climbing hangar we go to. We take a reading of how many people are in
+          the hangar every 30m using an API, and store this. This information is
+          displayed in multiple ways across the app. We are still working on
+          this project.
+        </div>
+      </div>
+      <div class="grey-two grey-box"></div>
+    </div>
+    <div class="technologies-used">
+      <p>React</p>
+      <p>Typescript</p>
+      <p>Tailwind</p>
+      <p>HTML/CSS</p>
+    </div>
+  </div>
+
+  <div class="project-example">
+    <div class="project-img img-two">
+      <img
+        src="{{ url_for('static', filename='img/hangar-dashboard.png') }}"
+        alt=""
+      />
+    </div>
+    <div class="links-two project-links">
+      <a
+        target="_blank"
+        href="https://github.com/itselectroz/climbing-hangar-dashboard"
+        ><img
+          src="{{ url_for('static', filename='img/github_outline.png') }}"
+          alt=""
+      /></a>
+      <a target="_blank" href="https://climbing-hangar-dashboard.web.app/"
+        ><img
+          src="{{ url_for('static', filename='img/open_in_new_outline.svg') }}"
+          alt=""
+      /></a>
     </div>
   </div>
 </div>
