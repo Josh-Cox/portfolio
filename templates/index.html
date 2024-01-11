@@ -44,10 +44,17 @@
     </div>
     <div class="about-title sub-heading">About Me</div>
     <div class="about-content">
-      I am have just started my 3rd year of a BSc (Hons) Computer Science at the
-      University of Exeter. I am a fast learner and have good problem solving
-      skills. In my spare time I like to code personal projects, play the
-      guitar, and play games.
+      I am in my 3rd year of a BSc (Hons) Computer Science at the University of
+      Exeter. I am a fast learner and have good problem solving skills. In my
+      spare time I like to code personal projects, play the guitar, and play
+      games. I have achieved a first in most of my modules so far, with my most
+      recent being a literature review for my final project, which can be found
+      <a
+        class="lit-rev"
+        href="{{ url_for('static', filename='img/MLChess.pdf') }}"
+        target="_blank"
+        >here</a
+      >
     </div>
   </div>
   <div class="skillset-subsection">
@@ -106,6 +113,46 @@
   <div class="project-title sub-heading">Projects</div>
   <div class="project-divider"></div>
   <div class="project-content">
+    <div class="project project-two project-first">
+      <div class="details-two project-details">
+        <div class="project-title title-two">Java Card Game</div>
+        <div class="project-details-content">
+          <div class="white-two white-box">
+            <div class="project-text">
+              This was a project for my course where me and a partner used pair
+              programming to make a virtual card game. We used parallel
+              procesingby running each player on its own thread and made unit
+              tests for each function. We also made sure to account for things
+              like race conditions and deadlocks.
+            </div>
+          </div>
+          <div class="grey-two grey-box"></div>
+        </div>
+        <div class="technologies-used">
+          <p>Java</p>
+          <p>Unit Testing</p>
+        </div>
+      </div>
+
+      <div class="project-example">
+        <div class="project-img img-two">
+          <img
+            src="{{ url_for('static', filename='img/card-game.png') }}"
+            alt=""
+          />
+        </div>
+        <div class="links-two project-links">
+          <a
+            target="_blank"
+            href="https://github.com/Josh-Cox/ECM2414-Card-Game-CA"
+            ><img
+              src="{{ url_for('static', filename='img/github_outline.png') }}"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+
     <div class="project project-one">
       <div class="project-example">
         <div class="project-img img-one">

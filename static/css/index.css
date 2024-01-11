@@ -89,6 +89,10 @@
     margin-right: 5rem;
 }
 
+.lit-rev {
+    color: black;
+}
+
 .cv {
     position: relative;
     top: 0;
@@ -269,6 +273,11 @@
 
     font-size: clamp(.5rem, 4vw, 1.5rem);
     font-weight: 300;
+}
+
+.project-first {
+    margin-bottom: 10rem;
+    margin-top: 5rem;
 }
 
 .project-two {
